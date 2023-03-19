@@ -7,9 +7,11 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                //"${file}",
+                "${fileDirname}\\*.c",
+                "-I","${workspaceFolder}\\LinkList\\linkList\\Headers",
                 "-o",
-                "${workspaceFolder}\\LinkList\\linkList\\Release\\${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}\\LinkList\\linkList\\Release\\linkedList.exe"
             ],
             "options": {
                 "cwd": ""
@@ -27,9 +29,11 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                //"${file}",
+                "${fileDirname}\\*.c",
+                "-I","${workspaceFolder}\\LinkList\\duLinkList\\Headers",
                 "-o",
-                "${workspaceFolder}\\LinkList\\duLinkList\\Release\\${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}\\LinkList\\duLinkList\\Release\\duLinkedList.exe"
             ],
             "options": {
                 "cwd": ""
