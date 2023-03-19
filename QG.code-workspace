@@ -20,7 +20,8 @@
         "ranges": "c",
         "span": "c",
         "conio.h": "c",
-        "stdbool.h": "c"
+        "stdbool.h": "c",
+        "typeinfo": "c"
       }
     }
   }

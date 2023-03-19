@@ -15,21 +15,16 @@ Status InitList(LinkedList *L)              //L是头节点指针的指针
 /*destroy a linked list, free all the nodes*/
 void DestroyList(LinkedList *L)
 {
-    LinkedList p,temp;                      //p，temp用于遍历链表
-    if(L!=NULL)
+    LinkedList temp;                            //temp存储下个结点指针
+    while (*L != NULL)                          //没走完链表
     {
-        p = (*L)->next;                         
-        (*L)->next=NULL;                        //断开头节点，头节点没有数据项
-        while (p != NULL)                       //p没走完链表
-        {
-            temp=p->next;
-            free(p);                            //释放p指针指向的节点
-            p=temp;
-        }
-        *L=NULL;
-        printf("链表删除成功！\n");
+        temp=(*L)->next;                        
+        free(*L);                               //释放L指向的结点
+        *L=temp;                                //*L指向下一个结点
     }
+    printf("链表删除成功！\n");
 }
+
 
 /*insert node q after node p*/
 Status InsertList(LNode *p, LNode *q)
@@ -57,8 +52,9 @@ Status InsertList(LNode *p, LNode *q)
 Status DeleteList(LNode *p, ElemType *e)
 {
     LinkedList temp;
-    if(p==NULL||e==NULL)
+    if(p==NULL)
     {
+        printf("该结点不存在\n");
         return ERROR;
     }
     temp=p->next;                        
@@ -66,14 +62,12 @@ Status DeleteList(LNode *p, ElemType *e)
     p->next=temp->next;                  //p指向下下个结点
     free(temp);
     return SUCCESS;
-    printf("结点删除成功！\n");
 }
 
 /*traverse the linked list and call the funtion visit*/
 void TraverseList(LinkedList L, void (*visit)(ElemType e))      //可填入一个函数指针，对结点的数值进行特定计算
 {
     LinkedList temp;
-    printf("当前链表为：");
     temp=L->next;
     if(temp==NULL)
     {

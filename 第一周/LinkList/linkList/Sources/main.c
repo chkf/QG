@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <conio.h>
 
 #define ReverseList_use_algo  1
 
@@ -36,7 +35,7 @@ void showcomlist(void)
     printf("单链表操作指令:\n");
     printf("\n");
     printf("    1:新建空链表\n");
-    printf("    2:销毁链表\n");
+    printf("    2:删除链表\n");
     printf("    3:插入一个结点\n");
     printf("    4:删除一个结点\n");
     printf("    5:遍历读取链表\n");
@@ -83,6 +82,7 @@ int main()
                     {
                         system("cls");
                         showcomlist();
+                        printf("当前链表为：");
                         TraverseList(head, printvalue);
                         printf("输入数据错误\n输入初始数据,以'-1'结束>");
                         goto a;
@@ -97,6 +97,7 @@ int main()
                         {   
                             system("cls");
                             showcomlist();
+                            printf("当前链表为：");
                             TraverseList(head, printvalue);
                             printf("输入初始数据,以'-1'结束>");
                         }
@@ -104,6 +105,7 @@ int main()
                         {
                             system("cls");
                             showcomlist();
+                            printf("当前链表为：");
                             TraverseList(head, printvalue);
                             printf("输入初始数据,以'-1'结束>");
                         }
@@ -113,6 +115,7 @@ int main()
                         {
                             system("cls");
                             showcomlist();
+                            printf("当前链表为：");
                             TraverseList(head, printvalue);
                             printf("输入数据错误\n输入初始数据,以'-1'结束>");
                             goto b;
@@ -121,6 +124,7 @@ int main()
                     system("cls");
                     showcomlist();
                     printf("链表初始化成功\n");
+                    printf("当前链表为：");
                     TraverseList(head, printvalue);
                     printf("输入指令编号>");
                 }
@@ -134,6 +138,8 @@ int main()
             case 2:
                 if(head==NULL)
                 {
+                    system("cls");
+                    showcomlist();
                     printf("链表不存在，输入指令>");
                 }
                 else
@@ -147,12 +153,15 @@ int main()
             case 3:
                 if(head==NULL)
                 {
+                    system("cls");
+                    showcomlist();
                     printf("链表不存在，输入指令>");
                 }
                 else
                 {
                     system("cls");
                     showcomlist();
+                    printf("当前链表为：");
                     TraverseList(head, printvalue);
                     printf("\n输入插入位置>");
                     reinsert:
@@ -162,6 +171,7 @@ int main()
                     {
                         system("cls");
                         showcomlist();
+                        printf("当前链表为：");
                         TraverseList(head, printvalue);
                         printf("输入数据错误\n输入插入位置>");
                         goto c;
@@ -185,6 +195,7 @@ int main()
                     {
                         system("cls");
                         showcomlist();
+                        printf("当前链表为：");
                         TraverseList(head, printvalue);
                         printf("输入数据错误\n输入插入位置>");
                         goto d;
@@ -195,6 +206,7 @@ int main()
                         system("cls");
                         showcomlist();
                         printf("链表插入成功");
+                        printf("当前链表为：");
                         TraverseList(head, printvalue);
                         printf("输入指令编号>");
                     }
@@ -203,6 +215,7 @@ int main()
                         system("cls");
                         showcomlist();
                         printf("链表插入失败，未知错误");
+                        printf("当前链表为：");
                         TraverseList(head, printvalue);
                         printf("输入指令编号>");
                     }
@@ -215,19 +228,27 @@ int main()
                     showcomlist();
                     printf("链表不存在，输入指令>");
                 }
+                else if(head->next==NULL)
+                {
+                    system("cls");
+                    showcomlist();
+                    printf("链表为空，输入指令>");
+                }
                 else
                 {
                     system("cls");
                     showcomlist();
+                    printf("当前链表为：");
                     TraverseList(head, printvalue);
                     printf("\n输入删除结点>");
                     redelete:
                     e:
-                    res=scanf("%d",&j);
+                    res = scanf("%d",&j);
                     while(getchar()!='\n'||!res)                                         //吞掉字符，防止跑飞
                     {
                         system("cls");
                         showcomlist();
+                        printf("当前链表为：");
                         TraverseList(head, printvalue);
                         printf("输入数据错误\n输入删除结点>");
                         goto e;
@@ -239,7 +260,7 @@ int main()
                         goto redelete;
                     }
                     p=head;
-                    for(i=0;i<j-1;i++)
+                    for(i=0;i<j-1&&p!=NULL&&j>=0;i++)
                     {
                         p=p->next;
                     }
@@ -249,6 +270,7 @@ int main()
                         system("cls");
                         showcomlist();
                         printf("结点删除成功，被删除结点的数据为%d\n",deleteddata);
+                        printf("当前链表为：");
                         TraverseList(head, printvalue);
                         printf("输入指令编号>");
                     }
@@ -256,7 +278,8 @@ int main()
                     {
                         system("cls");
                         showcomlist();
-                        printf("链表删除失败，删除位置可能不存在");
+                        printf("结点删除失败，删除位置可能不存在");
+                        printf("当前链表为：");
                         TraverseList(head, printvalue);
                         printf("输入指令编号>");
                     }
@@ -264,18 +287,25 @@ int main()
                 break;
             case 5:
                 if(head==NULL)
-                    {
-                        system("cls");
-                        showcomlist();
-                        printf("链表不存在，输入指令>");
-                    }
-                    else
-                    {
-                        system("cls");
-                        showcomlist();
-                        TraverseList(head, printvalue);
-                        printf("输入指令编号>");
-                    }
+                {
+                    system("cls");
+                    showcomlist();
+                    printf("链表不存在，输入指令>");
+                }
+                else if(head->next==NULL)
+                {
+                    system("cls");
+                    showcomlist();
+                    printf("链表为空，输入指令>");
+                }
+                else
+                {
+                    system("cls");
+                    showcomlist();
+                    printf("当前链表为：");
+                    TraverseList(head, printvalue);
+                    printf("输入指令编号>");
+                }
                 break;
             case 6:
                 if(head==NULL)
@@ -283,6 +313,12 @@ int main()
                         system("cls");
                         showcomlist();
                         printf("链表不存在，输入指令>");
+                    }
+                    else if(head->next==NULL)
+                    {
+                        system("cls");
+                        showcomlist();
+                        printf("链表为空，输入指令>");
                     }
                     else
                     {
@@ -295,6 +331,7 @@ int main()
                         {
                         system("cls");
                         showcomlist();
+                        printf("当前链表为：");
                         TraverseList(head, printvalue);
                         printf("输入数据错误\n输入要查找的数据>");
                         goto f;
@@ -310,10 +347,17 @@ int main()
                     showcomlist();
                     printf("链表不存在，输入指令>");
                 }
+                else if(head->next==NULL)
+                {
+                    system("cls");
+                    showcomlist();
+                    printf("链表为空，输入指令>");
+                }
                 else
                 {
                     system("cls");
                     showcomlist();
+                    printf("当前链表为：");
                     TraverseList(head, printvalue);
                     #if ReverseList_use_algo 
                         ReverseList_algo(&head,head);
@@ -321,6 +365,7 @@ int main()
                         ReverseList(&head);
                     #endif
                     printf("调转后,");
+                    printf("当前链表为：");
                     TraverseList(head, printvalue);
                     printf("输入指令>");
                 }
@@ -328,7 +373,15 @@ int main()
             case 8:
                 if(head==NULL)
                 {
+                    system("cls");
+                    showcomlist();
                     printf("链表不存在，输入指令>");
+                }
+                else if(head->next==NULL)
+                {
+                    system("cls");
+                    showcomlist();
+                    printf("链表为空，输入指令>");
                 }
                 else
                 {
@@ -356,13 +409,21 @@ int main()
                     showcomlist();
                     printf("链表不存在，输入指令>");
                 }
+                else if(head->next==NULL)
+                {
+                    system("cls");
+                    showcomlist();
+                    printf("链表为空，输入指令>");
+                }
                 else
                 {
                     system("cls");
                     showcomlist();
+                    printf("当前链表为：");
                     TraverseList(head, printvalue);
                     printf("奇偶调换后,");
                     head = ReverseEvenList(&head);
+                    printf("当前链表为：");
                     TraverseList(head, printvalue);
                     printf("输入指令>");
                 }
@@ -374,12 +435,19 @@ int main()
                     showcomlist();
                     printf("链表不存在，输入指令>");
                 }
+                else if(head->next==NULL)
+                {
+                    system("cls");
+                    showcomlist();
+                    printf("链表为空，输入指令>");
+                }
                 else
                 {
                     if((head->next))
                     {
                         system("cls");
                         showcomlist();
+                        printf("当前链表为：");
                         TraverseList(head, printvalue);
                         printf("中间节点为:");
                         MidNode = FindMidNode(&head);
@@ -401,4 +469,5 @@ int main()
                 break;
         }
     }
+    return 0;
 }
