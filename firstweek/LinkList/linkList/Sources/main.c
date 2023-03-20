@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 LinkedList head;
 
@@ -231,7 +233,7 @@ int main()
     }
     return 0;
 }
-
+///////////////////////////////////////////////////////////////////////////
 
 void showcomlist(void)
 {

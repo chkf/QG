@@ -9,13 +9,11 @@
                 "-g",
                 //"${file}",
                 "${fileDirname}\\*.c",
-                "-I",
-                "${workspaceFolder}\\LinkList\\linkList\\Headers",
-                "-o",
-                "${workspaceFolder}\\LinkList\\linkList\\Release\\linkedList.exe"
+                "-I","${workspaceFolder}\\LinkList\\linkList\\Headers",
+                "-o","${workspaceFolder}\\LinkList\\linkList\\Release\\linkedList.exe"
             ],
             "options": {
-                "cwd": ""
+                "cwd": "${fileDirname}"
             },
             "problemMatcher": [
                 "$gcc"

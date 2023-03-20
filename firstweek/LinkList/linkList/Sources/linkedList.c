@@ -1,4 +1,7 @@
-#include "main.h"
+#include "linkedList.h"
+#include <stdbool.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 /*initialize an empty linked list with only the head node without value*/
 Status InitList(LinkedList *L)              //L是头节点指针的指针
