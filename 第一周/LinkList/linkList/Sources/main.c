@@ -264,6 +264,12 @@ int main()
                     {
                         p=p->next;
                     }
+                    if(p==NULL||j<0)
+                    {
+                        printf("É¾³ýÎ»ÖÃ´íÎó\n");
+                        printf("ÖØÐÂÊäÈëÉ¾³ýÎ»ÖÃ>");
+                        goto redelete;
+                    }
                     res = DeleteList(p,&deleteddata);
                     if(res)
                     {
