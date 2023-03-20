@@ -1,7 +1,7 @@
 {
     "folders": [
       {
-        "path":"第一周"
+        "path":"firstweek"
       },
       {
         "path":""
@@ -21,7 +21,8 @@
         "span": "c",
         "conio.h": "c",
         "stdbool.h": "c",
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "main.h": "c"
       }
     }
   }

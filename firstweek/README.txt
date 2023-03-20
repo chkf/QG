@@ -7,5 +7,5 @@ Release 存放可执行文件
 
 Sources 存放源文件
 
-  单链表ReverseList(LinkedList *L)函数有递归和非递归两种，使用递归的函数需要在main.c将宏定义ReverseList_use_algo置1
+  单链表ReverseList(LinkedList *L)函数有递归和非递归两种，使用递归的函数需要在main.h将宏定义ReverseList_use_algo置1
 

@@ -1,6 +1,4 @@
-#include "linkedList.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 /*initialize an empty linked list with only the head node without value*/
 Status InitList(LinkedList *L)              //L是头节点指针的指针
@@ -69,6 +67,7 @@ void TraverseList(LinkedList L, void (*visit)(ElemType e))      //可填入一个函数
 {
     LinkedList temp;
     temp=L->next;
+    printf("当前链表为：");
     if(temp==NULL)
     {
         printf("空");
