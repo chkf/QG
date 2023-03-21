@@ -305,11 +305,9 @@ void my_scanf(ElemType * i,char * error_warn,bool showlist)                 //精
     bool res=0;
     while(!res)
     {
-        res=scanf("%d",i);
-        while(getchar()!='\n'||!res)                     //吞掉字符，防止跑飞
-        {
-            error_reshow(error_warn,showlist);
-        }
+        if(!res)res=scanf("%d",i);
+        while(getchar()!='\n');                             //没收到'\n'就卡着
+        if(!res)error_reshow(error_warn,showlist);
     }
 }
 
