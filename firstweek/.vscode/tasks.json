@@ -12,7 +12,6 @@
                 "${workspaceFolder}\\LinkList\\linkList\\Headers",
                 "-o",
                 "${workspaceFolder}\\LinkList\\linkList\\Release\\linkedList.exe"
-            //"cd $dir && gcc $fileName *.c && "
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -40,12 +39,15 @@
                 "${workspaceFolder}\\LinkList\\duLinkList\\Release\\duLinkedList.exe"
             ],
             "options": {
-                "cwd": ""
+                "cwd": "${fileDirname}"
             },
             "problemMatcher": [
                 "$gcc"
             ],
-            "group": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "detail": "调试器生成的任务。"
         }
     ],

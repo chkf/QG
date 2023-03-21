@@ -72,16 +72,20 @@ int main()
                         {
                             showcomlist();
                             printf("插入位置错误\n");
+                            printf("当前链表为：");
+                            TraverseList(head, printvalue);
                             printf("重新输入插入位置>");
                         }
                         else mark=true;                                 
                         for(i=0;i<j&&mark==true;i++)
                         {
                             p=p->next;
-                            if(p==NULL||p->next==NULL)
+                            if(p==NULL)
                             {
                                 showcomlist();
                                 mark=false;
+                                printf("当前链表为：");
+                                TraverseList(head, printvalue);
                                 printf("插入位置错误\n重新输入插入位置>");
                                 break;
                             }
@@ -112,7 +116,10 @@ int main()
                         if(j<0)
                         {
                             showcomlist();
-                            printf("删除结点错误\n重新输入删除结点>");
+                            printf("删除结点错误\n");
+                            printf("当前链表为：");
+                            TraverseList(head, printvalue);
+                            printf("重新输入删除结点>");
                         }
                         else mark=true;                                 
                         for(i=0;i<j&&mark==true;i++)
@@ -122,7 +129,10 @@ int main()
                             {
                                 showcomlist();
                                 mark=false;
-                                printf("删除结点错误\n重新输入删除结点>");
+                                printf("删除结点错误\n");
+                                printf("当前链表为：");
+                                TraverseList(head, printvalue);
+                                printf("重新输入删除结点>");
                                 break;
                             }
                         }
@@ -170,13 +180,13 @@ int main()
                     #endif
                     if(res)
                     {
-                        printf("调转后,当前链表为：");
-                        TraverseList(head, printvalue);
+                        printf("调转后,当前链表为：");                          //需要特殊输出，这里不能用res_react函数
+                        TraverseList(head, printvalue);             
                         printf("输入指令编号>");
                     }
                     else
                     {
-                        res_react(res,"输入指令编号>");
+                        res_react(res,"输入指令编号>");                       
                     }
                 }
                 break;

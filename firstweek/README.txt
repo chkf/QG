@@ -2,6 +2,7 @@
   使用VScode重新编译需要修改task.json文件（.vscode文件夹）中编译器位置
 
 Headers 存放头文件
+  main.h存放main函数中用到的自定义函数的声明
 
 Release 存放可执行文件
 
