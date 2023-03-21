@@ -7,10 +7,12 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                //"${file}",
                 "${fileDirname}\\*.c",
-                "-I","${workspaceFolder}\\LinkList\\linkList\\Headers",
-                "-o","${workspaceFolder}\\LinkList\\linkList\\Release\\linkedList.exe"
+                "-I",
+                "${workspaceFolder}\\LinkList\\linkList\\Headers",
+                "-o",
+                "${workspaceFolder}\\LinkList\\linkList\\Release\\linkedList.exe"
+            //"cd $dir && gcc $fileName *.c && "
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -18,7 +20,10 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "group": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "detail": "调试器生成的任务。"
         },
         {
@@ -28,9 +33,9 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                //"${file}",
                 "${fileDirname}\\*.c",
-                "-I","${workspaceFolder}\\LinkList\\duLinkList\\Headers",
+                "-I",
+                "${workspaceFolder}\\LinkList\\duLinkList\\Headers",
                 "-o",
                 "${workspaceFolder}\\LinkList\\duLinkList\\Release\\duLinkedList.exe"
             ],

@@ -23,6 +23,8 @@
         "stdbool.h": "c",
         "typeinfo": "c",
         "main.h": "c"
-      }
+      },
+      "code-runner.runInTerminal": true,
+      "files.encoding": "gb2312"
     }
   }

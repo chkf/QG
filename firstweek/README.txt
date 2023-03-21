@@ -1,11 +1,11 @@
-.vscoe å­˜æ”¾vscodeé…ç½®æ–‡ä»¶
-  ä½¿ç”¨VScodeé‡æ–°ç¼–è¯‘éœ€è¦ä¿®æ”¹task.jsonæ–‡ä»¶ï¼ˆ.vscodeæ–‡ä»¶å¤¹ï¼‰ä¸­ç¼–è¯‘å™¨ä½ç½®
+.vscoe ´æ·ÅvscodeÅäÖÃÎÄ¼ş
+  Ê¹ÓÃVScodeÖØĞÂ±àÒëĞèÒªĞŞ¸Ätask.jsonÎÄ¼ş£¨.vscodeÎÄ¼ş¼Ğ£©ÖĞ±àÒëÆ÷Î»ÖÃ
 
-Headers å­˜æ”¾å¤´æ–‡ä»¶
+Headers ´æ·ÅÍ·ÎÄ¼ş
 
-Release å­˜æ”¾å¯æ‰§è¡Œæ–‡ä»¶
+Release ´æ·Å¿ÉÖ´ĞĞÎÄ¼ş
 
-Sources å­˜æ”¾æºæ–‡ä»¶
+Sources ´æ·ÅÔ´ÎÄ¼ş
 
-  å•é“¾è¡¨ReverseList(LinkedList *L)å‡½æ•°æœ‰é€’å½’å’Œéé€’å½’ä¸¤ç§ï¼Œä½¿ç”¨é€’å½’çš„å‡½æ•°éœ€è¦åœ¨main.hå°†å®å®šä¹‰ReverseList_use_algoç½®1
+  µ¥Á´±íReverseList(LinkedList *L)º¯ÊıÓĞµİ¹éºÍ·Çµİ¹éÁ½ÖÖ£¬Ê¹ÓÃµİ¹éµÄº¯ÊıĞèÒªÔÚmain.h½«ºê¶¨ÒåReverseList_use_algoÖÃ1
 
