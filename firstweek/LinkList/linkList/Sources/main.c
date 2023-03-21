@@ -294,6 +294,7 @@ Status ReverseList_algo(LinkedList *L,LinkedList q)      //把头结点传递到最后
 Status error_reshow(char * str,bool showlist)                          //输入数据错误时，清屏并提示
 {
     showcomlist();
+    
     if(showlist)TraverseList(head, printvalue);
     printf("输入数据错误\n");
     printf(str);

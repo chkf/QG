@@ -33,17 +33,7 @@ int main()
                         res = InsertAfterList_DuL(end, newnode);
                         end = newnode;
                         res_react(res,"输入初始数据,以'-1'结束>");
-                        b:
-                        res=scanf("%d",&newdata);
-                        while(getchar()!='\n'||!res)                                         //吞掉字符，防止跑飞
-                        {
-                            system("cls");
-                            showcomlist();
-                            printf("当前链表为：");
-                            TraverseList_DuL(head, printvalue);
-                            printf("输入数据错误\n输入初始数据,以'-1'结束>");
-                            my_scanf(&newdata,"重新输入初始数据,以'-1'结束>",true,0);
-                        }
+                        my_scanf(&newdata,"重新输入初始数据,以'-1'结束>",true,0);
                     }
                     showcomlist();
                     printf("链表初始化成功\n");

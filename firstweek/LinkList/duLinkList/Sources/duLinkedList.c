@@ -93,6 +93,7 @@ void TraverseList_DuL(DuLinkedList L, void (*visit)(ElemType e))
 {
     DuLinkedList temp;
     temp=L->next;
+    printf("当前链表为：");
     if(temp==NULL)
     {
         printf("空");
