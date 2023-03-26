@@ -24,7 +24,7 @@ typedef  struct  LinkStack
 
 
 //链栈
-Status initLStack(LinkStack *s);//初始化栈
+LinkStack * initLStack(LinkStack *s);//初始化栈
 Status isEmptyLStack(LinkStack *s);//判断栈是否为空
 Status getTopLStack(LinkStack *s,ElemType *e);//得到栈顶元素
 Status clearLStack(LinkStack *s);//清空栈
