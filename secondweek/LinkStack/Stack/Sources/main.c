@@ -49,7 +49,7 @@ void res_react(bool res,char * str)                     //输入成功与否都要说的话
 }
 
 /*显示输入错误*/
-Status error_reshow(char * str,bool showtop)                          //输入数据错误时，清屏并提示
+void error_reshow(char * str,bool showtop)                          //输入数据错误时，清屏并提示
 {
     int topdata;
     bool res;

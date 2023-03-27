@@ -1,14 +1,19 @@
 #include "LQueue.h" 
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
 /**
  *  @name        : void InitLQueue(LQueue *Q)
  *  @description : 初始化队列
  *  @param       : Q 队列指针Q
  *  @notice      : None
  */
-void InitLQueue(LQueue *Q)
+LQueue* InitLQueue(LQueue *Q)
 {
-	
+    Q=(LQueue*)malloc(sizeof(LQueue));
+    Q->front=NULL;
+    Q->rear=NULL;
+    Q->length=0;
 }
 
 /**
@@ -19,7 +24,7 @@ void InitLQueue(LQueue *Q)
  */
 void DestoryLQueue(LQueue *Q)
 {
-	
+	ClearLQueue(Q);
 }
 
 /**
@@ -31,7 +36,8 @@ void DestoryLQueue(LQueue *Q)
  */
 Status IsEmptyLQueue(const LQueue *Q)
 {
-	
+	if(Q->front==Q->rear&&Q->length==0)return TRUE;
+    else return FALSE;
 }
 
 /**
@@ -43,7 +49,9 @@ Status IsEmptyLQueue(const LQueue *Q)
  */
 Status GetHeadLQueue(LQueue *Q, void *e)
 {
-	
+    int temp = *(int*)(Q->front->data);
+    *(int*)e=temp;
+    return TRUE;
 }
 
 /**
@@ -55,7 +63,7 @@ Status GetHeadLQueue(LQueue *Q, void *e)
  */
 int LengthLQueue(LQueue *Q)
 {
-	
+	return Q->length;
 }
 
 /**
@@ -67,7 +75,23 @@ int LengthLQueue(LQueue *Q)
  */
 Status EnLQueue(LQueue *Q, void *data)
 {
-	
+    if(data==NULL)return FALSE;
+    Node *temp;
+    temp=(Node*)malloc(sizeof(Node));
+	Q->length++;
+    if(Q->length==1)
+    {
+
+        Q->front=Q->rear=temp;
+    }
+    else
+    {
+        Q->rear->next=temp;
+        Q->rear=temp;
+    }
+    temp->next=NULL;
+    temp->data=data;
+    return TRUE;
 }
 
 /**
@@ -79,7 +103,14 @@ Status EnLQueue(LQueue *Q, void *data)
  */
 Status DeLQueue(LQueue *Q)
 {
-	
+    Node *temp;
+    temp = (Node *)malloc(sizeof(Node));
+    temp=Q->front;
+	Q->length--;
+    Q->front=temp->next;
+    //free(temp);
+    return TRUE;
+
 }
 
 /**
@@ -90,7 +121,14 @@ Status DeLQueue(LQueue *Q)
  */
 void ClearLQueue(LQueue *Q)
 {
-	
+	Node *temp;
+    temp = (Node *)malloc(sizeof(Node));
+    while(Q->length!=0)
+    {
+        temp=Q->front;
+        Q->length--;
+        Q->front=temp->next;
+    }
 }
 
 /**
@@ -102,7 +140,16 @@ void ClearLQueue(LQueue *Q)
  */
 Status TraverseLQueue(const LQueue *Q, void (*foo)(void *q))
 {
-	
+	Node *temp;
+    temp=Q->front;
+    printf("当前队列为：");
+    while(temp!=Q->rear)
+    {
+        foo(temp->data);
+        temp=temp->next;
+    }
+    foo(temp->data);
+    return TRUE;
 }
 
 /**
@@ -113,7 +160,7 @@ Status TraverseLQueue(const LQueue *Q, void (*foo)(void *q))
  */
 void LPrint(void *q)
 {
-	
+    printf("%d-",*(int *)q);
 }
 
 

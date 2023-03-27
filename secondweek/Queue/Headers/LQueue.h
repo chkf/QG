@@ -42,8 +42,8 @@ typedef enum
     FALSE=0, TRUE=1
 } Status;
 
-char type;					
-char datatype[30];			
+//char type;					
+//char datatype[30];			
 
 /**************************************************************
  *    Prototype Declare Section
@@ -56,7 +56,7 @@ char datatype[30];
  *  @param       : Q ∂”¡–÷∏’ÎQ
  *  @notice      : None
  */
-void InitLQueue(LQueue *Q);
+LQueue* InitLQueue(LQueue *Q);
 
 /**
  *  @name        : void DestoryLQueue(LQueue *Q)
