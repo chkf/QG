@@ -1,4 +1,4 @@
-LX51 LINKER/LOCATER V4.66.97.0                                                          04/03/2023  12:27:24  PAGE 1
+LX51 LINKER/LOCATER V4.66.97.0                                                          04/03/2023  23:48:56  PAGE 1
 
 
 LX51 LINKER/LOCATER V4.66.97.0, INVOKED BY:
@@ -33,7 +33,7 @@ ACTIVE MEMORY CLASSES OF MODULE:  .\BUILD\DEBUG\THIRDWEEK (MAIN)
 
 BASE        START       END         USED      MEMORY CLASS
 ==========================================================
-C:000000H   C:000000H   C:00FFFFH   000436H   CODE
+C:000000H   C:000000H   C:00FFFFH   000431H   CODE
 I:000000H   I:000000H   I:00007FH   00001AH   DATA
 I:000000H   I:000000H   I:0000FFH   00000DH   IDATA
 I:000020H.0 I:000020H.0 I:00002FH.7 000000H.1 BIT
@@ -67,7 +67,7 @@ START     STOP      LENGTH    ALIGN  RELOC    MEMORY CLASS   SEGMENT NAME
 000020H.1 000020H   000000H.7 ---    ---      **GAP**
 000021H   000028H   000008H   BYTE   UNIT     IDATA          ?RTX?TASKSTATE?S
 000029H   000029H   000001H   BYTE   UNIT     IDATA          ?STACK
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/03/2023  12:27:24  PAGE 2
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/03/2023  23:48:56  PAGE 2
 
 
 
@@ -79,10 +79,10 @@ START     STOP      LENGTH    ALIGN  RELOC    MEMORY CLASS   SEGMENT NAME
 0002F1H   00037CH   00008CH   BYTE   UNIT     CODE           ?C_C51STARTUP
 00037DH   0003DDH   000061H   BYTE   UNIT     CODE           ?PR?TASK3?MAIN
 0003DEH   000407H   00002AH   BYTE   UNIT     CODE           ?PR?TASK1?MAIN
-000408H   000416H   00000FH   BYTE   UNIT     CODE           ?PR?TASK0?MAIN
-000417H   000423H   00000DH   BYTE   UNIT     CODE           ?C_INITSEG
-000424H   00042DH   00000AH   BYTE   UNIT     CODE           ?PR?TASK2?MAIN
-00042EH   000435H   000008H   BYTE   UNIT     CODE           ?RTX?TASKENT?S
+000408H   000414H   00000DH   BYTE   UNIT     CODE           ?C_INITSEG
+000415H   00041EH   00000AH   BYTE   UNIT     CODE           ?PR?TASK0?MAIN
+00041FH   000428H   00000AH   BYTE   UNIT     CODE           ?PR?TASK2?MAIN
+000429H   000430H   000008H   BYTE   UNIT     CODE           ?RTX?TASKENT?S
 
 
 
@@ -135,7 +135,7 @@ PUBLIC SYMBOLS OF MODULE:  .\BUILD\DEBUG\THIRDWEEK (MAIN)
       00000000H   NUMBER   ---       ?RTX_FTASKCONTEXT?3
       00000000H   NUMBER   ---       ?RTX_FTASKDATA?1
       00000000H   NUMBER   ---       ?RTX_FTASKDATA?2
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/03/2023  12:27:24  PAGE 3
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/03/2023  23:48:56  PAGE 3
 
 
       00000000H   NUMBER   ---       ?RTX_FTASKDATA?3
@@ -145,7 +145,7 @@ PUBLIC SYMBOLS OF MODULE:  .\BUILD\DEBUG\THIRDWEEK (MAIN)
       00000000H   NUMBER   ---       ?RTX_PBP
       000000FFH   NUMBER   ---       ?RTX_RAMTOP
       00000000H   NUMBER   ---       ?RTX_REENTRANT
-      0100042EH   CODE     ---       ?RTX_TASKENTRY
+      01000429H   CODE     ---       ?RTX_TASKENTRY
       010002F0H   CODE     ---       ?RTX_TASKIDX
       0000001AH   IDATA    ---       ?RTX_TASKSP
       00000021H   IDATA    ---       ?RTX_TASKSTATUS
@@ -158,9 +158,9 @@ PUBLIC SYMBOLS OF MODULE:  .\BUILD\DEBUG\THIRDWEEK (MAIN)
       010002B4H   CODE     ---       MAIN
       0000000EH   DATA     ---       number
       010001FAH   CODE     ---       OS_SWITCH_TASK
-      01000408H   CODE     ---       task0
+      01000415H   CODE     ---       task0
       010003DEH   CODE     ---       task1
-      01000424H   CODE     ---       task2
+      0100041FH   CODE     ---       task2
       0100037DH   CODE     ---       task3
 
 
@@ -171,11 +171,11 @@ SYMBOL TABLE OF MODULE:  .\BUILD\DEBUG\THIRDWEEK (MAIN)
       ====================================================
       ---         MODULE    ---      ---       MAIN
       0100037DH   PUBLIC    CODE     ---       task3
-      01000424H   PUBLIC    CODE     ---       task2
+      0100041FH   PUBLIC    CODE     ---       task2
       010003DEH   PUBLIC    CODE     ---       task1
-      01000408H   PUBLIC    CODE     ---       task0
+      01000415H   PUBLIC    CODE     ---       task0
 
-      01000408H   BLOCK     CODE     ---       LVL=0
+      01000415H   BLOCK     CODE     ---       LVL=0
       ---         BLOCKEND  ---      ---       LVL=0
 
       010003DEH   BLOCK     CODE     ---       LVL=0
@@ -184,7 +184,7 @@ SYMBOL TABLE OF MODULE:  .\BUILD\DEBUG\THIRDWEEK (MAIN)
       ---         BLOCKEND  ---      ---       LVL=1
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000424H   BLOCK     CODE     ---       LVL=0
+      0100041FH   BLOCK     CODE     ---       LVL=0
       ---         BLOCKEND  ---      ---       LVL=0
 
       0100037DH   BLOCK     CODE     ---       LVL=0
@@ -203,7 +203,7 @@ SYMBOL TABLE OF MODULE:  .\BUILD\DEBUG\THIRDWEEK (MAIN)
       ---         MODULE    ---      ---       ?RTX51_TINY_OS_CREATE
       0100000EH   PUBLIC    CODE     ---       _OS_CREATE_TASK
 
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/03/2023  12:27:24  PAGE 4
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/03/2023  23:48:56  PAGE 4
 
 
       ---         MODULE    ---      ---       ?RTX51_TINY_OS_DELETE
@@ -220,7 +220,7 @@ SYMBOL TABLE OF MODULE:  .\BUILD\DEBUG\THIRDWEEK (MAIN)
       00000007H   PUBLIC    DATA     ---       ?RTX_NEXTID
       01000211H   PUBLIC    CODE     ---       ?RTX_NEXTTASK
       000000FFH   PUBLIC    NUMBER   ---       ?RTX_RAMTOP
-      0100042EH   PUBLIC    CODE     ---       ?RTX_TASKENTRY
+      01000429H   PUBLIC    CODE     ---       ?RTX_TASKENTRY
       010002F0H   PUBLIC    CODE     ---       ?RTX_TASKIDX
       0000001AH   PUBLIC    IDATA    ---       ?RTX_TASKSP
       00000021H   PUBLIC    IDATA    ---       ?RTX_TASKSTATUS
@@ -271,7 +271,7 @@ SYMBOL TABLE OF MODULE:  .\BUILD\DEBUG\THIRDWEEK (MAIN)
       00000014H   SYMBOL    NUMBER   ---       FREE_STACK
       01000183H   SYMBOL    CODE     ---       HW_TIMER
       000000A8H   SYMBOL    DATA     ---       IE
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/03/2023  12:27:24  PAGE 5
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/03/2023  23:48:56  PAGE 5
 
 
       00000088H.1 SYMBOL    BIT      ---       IE0
@@ -339,7 +339,7 @@ SYMBOL TABLE OF MODULE:  .\BUILD\DEBUG\THIRDWEEK (MAIN)
       0100019BH   LINE      CODE     ---       #311
       0100019DH   LINE      CODE     ---       #312
       0100019FH   LINE      CODE     ---       #316
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/03/2023  12:27:24  PAGE 6
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/03/2023  23:48:56  PAGE 6
 
 
       010001A0H   LINE      CODE     ---       #317
@@ -407,7 +407,7 @@ SYMBOL TABLE OF MODULE:  .\BUILD\DEBUG\THIRDWEEK (MAIN)
       0100020DH   LINE      CODE     ---       #449
       0100020EH   LINE      CODE     ---       #450
       01000211H   LINE      CODE     ---       #458
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/03/2023  12:27:24  PAGE 7
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/03/2023  23:48:56  PAGE 7
 
 
       01000212H   LINE      CODE     ---       #462
@@ -475,7 +475,7 @@ SYMBOL TABLE OF MODULE:  .\BUILD\DEBUG\THIRDWEEK (MAIN)
       01000273H   LINE      CODE     ---       #567
       01000276H   LINE      CODE     ---       #571
       01000279H   LINE      CODE     ---       #572
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/03/2023  12:27:24  PAGE 8
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/03/2023  23:48:56  PAGE 8
 
 
       0100027CH   LINE      CODE     ---       #576
@@ -543,12 +543,12 @@ SYMBOL TABLE OF MODULE:  .\BUILD\DEBUG\THIRDWEEK (MAIN)
 
       ---         MODULE    ---      ---       ?C_STARTUP
       01000000H   PUBLIC    CODE     ---       ?C_STARTUP
-LX51 LINKER/LOCATER V4.66.97.0                                                        04/03/2023  12:27:24  PAGE 9
+LX51 LINKER/LOCATER V4.66.97.0                                                        04/03/2023  23:48:56  PAGE 9
 
 
 
       ---         MODULE    ---      ---       ?C_INIT
       01000338H   PUBLIC    CODE     ---       ?C_START
 
-Program Size: data=39.1 xdata=0 const=0 code=1078
+Program Size: data=39.1 xdata=0 const=0 code=1073
 LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

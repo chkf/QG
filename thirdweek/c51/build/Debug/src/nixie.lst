@@ -1,4 +1,4 @@
-C51 COMPILER V9.60.0.0   NIXIE                                                             04/03/2023 12:27:24 PAGE 1   
+C51 COMPILER V9.60.0.0   NIXIE                                                             04/03/2023 23:48:56 PAGE 1   
 
 
 C51 COMPILER V9.60.0.0, COMPILATION OF MODULE NIXIE
@@ -18,7 +18,7 @@ line level    source
    6   1              P2=number[b];
    7   1      }
    8          
-C51 COMPILER V9.60.0.0   NIXIE                                                             04/03/2023 12:27:24 PAGE 2   
+C51 COMPILER V9.60.0.0   NIXIE                                                             04/03/2023 23:48:56 PAGE 2   
 
 ASSEMBLY LISTING OF GENERATED OBJECT CODE
 
@@ -37,7 +37,7 @@ ASSEMBLY LISTING OF GENERATED OBJECT CODE
 0007 22                RET     
              ; FUNCTION _nixie (END)
 
-C51 COMPILER V9.60.0.0   NIXIE                                                             04/03/2023 12:27:24 PAGE 3   
+C51 COMPILER V9.60.0.0   NIXIE                                                             04/03/2023 23:48:56 PAGE 3   
 
 NAME                                    CLASS   MSPACE  TYPE    OFFSET  SIZE
 ====                                    =====   ======  ====    ======  ====
@@ -100,7 +100,7 @@ _nixie . . . . . . . . . . . . . . . .  PUBLIC   CODE   PROC     0000H  -----
 RCAP2H . . . . . . . . . . . . . . . .  SFR      DATA   U_CHAR   00CBH  1
 PS . . . . . . . . . . . . . . . . . .  ABSBIT   -----  BIT      00BCH  1
 SP . . . . . . . . . . . . . . . . . .  SFR      DATA   U_CHAR   0081H  1
-C51 COMPILER V9.60.0.0   NIXIE                                                             04/03/2023 12:27:24 PAGE 4   
+C51 COMPILER V9.60.0.0   NIXIE                                                             04/03/2023 23:48:56 PAGE 4   
 
 NAME                                    CLASS   MSPACE  TYPE    OFFSET  SIZE
 ====                                    =====   ======  ====    ======  ====
@@ -163,7 +163,7 @@ T2MOD. . . . . . . . . . . . . . . . .  SFR      DATA   U_CHAR   00C9H  1
 T2CON. . . . . . . . . . . . . . . . .  SFR      DATA   U_CHAR   00C8H  1
 RXD. . . . . . . . . . . . . . . . . .  ABSBIT   -----  BIT      00B0H  1
 TXD. . . . . . . . . . . . . . . . . .  ABSBIT   -----  BIT      00B1H  1
-C51 COMPILER V9.60.0.0   NIXIE                                                             04/03/2023 12:27:24 PAGE 5   
+C51 COMPILER V9.60.0.0   NIXIE                                                             04/03/2023 23:48:56 PAGE 5   
 
 NAME                                    CLASS   MSPACE  TYPE    OFFSET  SIZE
 ====                                    =====   ======  ====    ======  ====

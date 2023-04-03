@@ -4,7 +4,7 @@
 
 void task0(void) _task_ 0 
 {  
-	os_create_task(1);  
+	//os_create_task(1);  
 	os_create_task(2);  
    	os_delete_task(0);
 }  

@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "sort.h"
+#include <windows.h>
 #include <conio.h>
+#include <time.h>
 
 int data[100001];
 int dummy[100001];
@@ -42,14 +44,10 @@ void showcmdlist(void)
     system("cls");
     printf("input command>");
     printf("1:insertSort\n");
-    printf("3:MergeSort\n");
-    printf("4:QuickSort_Recursion\n");
-    printf("5:QuickSort\n");
-    printf("6:Partition\n");
-    printf("7:CountSort\n");
-    printf("8:RadixCountSort\n");
-    printf("9:ColorSort\n");
-    printf("8:exit\n");
+    printf("2:MergeSort\n");
+    printf("3:QuickSort_Recursion\n");
+    printf("4:CountSort\n");
+    printf("5:exit\n");
     printf("input command>");
 }
 
@@ -79,6 +77,7 @@ int main ()
 {   
     FILE *fp;
     int i = 0,command;
+    clock_t start,end;
     while(1)
     {
         printf("press enter to continue");
@@ -89,8 +88,10 @@ int main ()
         {
             case 1:
                 read_data();
+                start=clock();
                 insertSort(data,10000);                               //调用插入排序算法
-                printf("InsertSort: ");
+                end=clock();
+                printf("time:%dms\n",end-start);
                 if(check())
                     printf("Correct\n");
                 else
@@ -98,77 +99,44 @@ int main ()
                 break;
             case 2:
                 read_data();
-                MergeArray(data,0,5000,10000,dummy);                         //调用归并排序算法
+                start=clock();
+                MergeSort(data,0,9999,dummy);                               //调用归并排序算法
+                end=clock();
+                printf("time:%dms\n",end-start);
                 printf("MergeSort: ");
                 if(check())
                     printf("Correct\n");
                 else
                     printf("Wrong\n");
+                printf("MergeSort: ");
+                for(i=0;i<100;i++)
+                    printf("%d ",data[i]);
                 break;
             case 3:
                 read_data();
-                MergeSort(data,0,9999,dummy);                               //调用归并排序算法
-                printf("MergeSort: ");
+                start=clock();
+                QuickSort_Recursion(data,0,9999);                               //调用快速排序算法
+                end=clock();
+                printf("time:%dms\n",end-start);
+                if(check())
+                    printf("Correct\n");
+                else
+                    printf("Wrong\n");
+                for(i=0;i<100;i++)
+                    printf("%d ",data[i]);
+                break;
+            case 4:
+                read_data();
+                start=clock();
+                CountSort(data,10000,999999);                               //调用计数排序算法
+                end=clock();
+                printf("time:%dms\n",end-start);
                 if(check())
                     printf("Correct\n");
                 else
                     printf("Wrong\n");
                 break;
-            case 4:
-                read_data();
-                QuickSort_Recursion(data,0,9999);                               //调用快速排序算法
-                printf("QuickSort_Recursion: ");
-                for(i=0;i<10000;i++)
-                {
-
-                }
-                break;
             case 5:
-                read_data();
-                QuickSort(data,10000);                               //调用快速排序算法
-                printf("QuickSort: ");
-                for(i=0;i<10000;i++)
-                {
-
-                }
-                break;
-            case 6:
-                read_data();
-                Partition(data,0,99);                               //调用快速排序算法
-                printf("Partition: ");
-                for(i=0;i<10000;i++)
-                {
-
-                }
-                break;
-            case 7:
-                read_data();
-                CountSort(data,100,90000);                               //调用计数排序算法
-                printf("CountSort: ");
-                for(i=0;i<10000;i++)
-                {
-
-                }
-                break;
-            case 8:
-                read_data();
-                RadixCountSort(data,100);                               //调用基数排序算法
-                printf("RadixCountSort: ");
-                for(i=0;i<10000;i++)
-                {
-
-                }
-                break;
-            case 9:
-                read_data();
-                ColorSort(data,100);                               //调用颜色排序算法
-                printf("ColorSort: ");
-                for(i=0;i<10000;i++)
-                {
-
-                }
-                break;          
-            case 10:
                 return 0;
                 break;
             default:

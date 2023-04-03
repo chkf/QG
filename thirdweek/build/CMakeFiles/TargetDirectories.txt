@@ -1,0 +1,3 @@
+D:/study files/coding/QG/thirdweek/build/CMakeFiles/Sort.dir
+D:/study files/coding/QG/thirdweek/build/CMakeFiles/edit_cache.dir
+D:/study files/coding/QG/thirdweek/build/CMakeFiles/rebuild_cache.dir

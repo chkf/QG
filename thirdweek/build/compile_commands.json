@@ -1,0 +1,14 @@
+[
+{
+  "directory": "D:/study files/coding/QG/thirdweek/build",
+  "command": "D:/TDM-GCC-64/bin/gcc.exe  @CMakeFiles/Sort.dir/includes_C.rsp -g -o CMakeFiles/Sort.dir/Sources/main.c.obj -c \"D:/study files/coding/QG/thirdweek/Sort/Sources/main.c\"",
+  "file": "D:/study files/coding/QG/thirdweek/Sort/Sources/main.c",
+  "output": "CMakeFiles/Sort.dir/Sources/main.c.obj"
+},
+{
+  "directory": "D:/study files/coding/QG/thirdweek/build",
+  "command": "D:/TDM-GCC-64/bin/gcc.exe  @CMakeFiles/Sort.dir/includes_C.rsp -g -o CMakeFiles/Sort.dir/Sources/sort.c.obj -c \"D:/study files/coding/QG/thirdweek/Sort/Sources/sort.c\"",
+  "file": "D:/study files/coding/QG/thirdweek/Sort/Sources/sort.c",
+  "output": "CMakeFiles/Sort.dir/Sources/sort.c.obj"
+}
+]
