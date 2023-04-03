@@ -20,7 +20,8 @@
             "*.cxx": "cpp",
             "*.cc": "cpp",
             "MAIN.C": "cpp",
-            "REGX52.H": "cpp"
+            "REGX52.H": "cpp",
+            "RTX51TNY.H": "cpp"
         },
         "[yaml]": {
             "editor.insertSpaces": true,

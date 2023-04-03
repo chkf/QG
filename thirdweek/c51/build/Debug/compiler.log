@@ -1,0 +1,14 @@
+>>> cc
+
+
+
+>>> ld
+
+
+LX51 LINKER/LOCATER V4.66.97.0 - SN: K1DZC-T8JQSC
+COPYRIGHT ARM Germany GmbH 1995 - 2019
+"@d:\study files\coding\QG\thirdweek\c51\build\Debug\thirdweek.lnp" .\build\Debug\src\main.o,.\build\Debug\src\nixie.o TO .\build\Debug\thirdweek
+PRINT(.\build\Debug\thirdweek.map) Rtx51Tiny REMOVEUNUSED
+
+Program Size: data=39.1 xdata=0 const=0 code=1078
+LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

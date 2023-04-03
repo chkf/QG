@@ -45,9 +45,12 @@
       "custom_dep": {
         "name": "default",
         "incList": [
-          "inc"
+          "inc",
+          "../../../../../Program Files/keil5/C51/INC/Atmel",
+          "../../../../../Program Files/keil5/C51/INC"
         ],
         "libList": [
+          "../../../../../Program Files/keil5/C51/LIB",
           "../../../../../Program Files/keil5/C51/INC/Atmel"
         ],
         "sourceDirList": [],

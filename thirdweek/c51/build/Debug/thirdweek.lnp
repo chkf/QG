@@ -1,0 +1,2 @@
+.\build\Debug\src\main.o,.\build\Debug\src\nixie.o TO .\build\Debug\thirdweek
+PRINT(.\build\Debug\thirdweek.map) Rtx51Tiny REMOVEUNUSED

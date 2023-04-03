@@ -1,38 +1,51 @@
-#include <REGX52.H> 
-sbit LED1=P2^0;
-void Delay(int xms)
-{
-	unsigned char i, j;
-	while(xms)
-	{
-		i = 2;
-		j = 199;
-		do
-		{
-			while (--j);
-		} while (--i);
-	xms--;
-	}
-}
+#include <REGX52.H>
+#include <RTX51TNY.H>
+#include "nixie.h"
 
-void main()
-{
-	char ln=0,i;
-	while(1)
-	{
-		P2=0xff;//全灭
-		Delay(50);
+void task0(void) _task_ 0 
+{  
+	os_create_task(1);  
+	os_create_task(2);  
+   	os_delete_task(0);
+}  
+
+void task1(void) _task_ 1 
+{  
+	char i;
+	while (1) 
+	{    
 		for(i=0;i<8;i++)
 		{
-			Delay(50);
-			P2=P2<<1;//一个一个亮
+			os_wait2(K_TMO, 500);
+			nixie(i);
+		}    
+	}  
+}
+
+void task2(void) _task_ 2
+{
+	os_wait2(K_TMO, 2);
+	P0_0=!P0_0;
+}
+
+void task3(void) _task_ 3
+{
+	char i;
+	while(1)  
+    {  
+        P1=0xff;//全灭
+		os_wait2(K_TMO, 50);
+		for(i=0;i<8;i++)
+		{
+			os_wait2(K_TMO, 50);
+			P1=P1<<1;				//一个一个亮
 		}
-		Delay(50);
+		P1=1;						//最后一个灭
+		os_wait2(K_TMO, 50);
 		for(i=0;i<9;i++)
 		{
-			Delay(50);
-			P2=P2>>1;
-			P2+=0x80;
+			os_wait2(K_TMO, 50);
+			P1=(P1<<1)+1;;			//一个一个灭
 		}
-	}		
+   	}  
 }
